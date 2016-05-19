@@ -6,4 +6,7 @@ scala:
 script:
  - sbt compile
  - sbt test
- 
+ - sbt clean coverage test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

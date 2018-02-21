@@ -7,7 +7,9 @@ script:
  - sbt compile
  - sbt test
  - sbt clean coverage test
-
+ - du -h
+ - df -h
+ 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   
